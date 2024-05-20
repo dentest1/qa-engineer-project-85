@@ -606,15 +606,21 @@
   requirement: |
     Сайт должен быть способен обрабатывать большое количество трафика (например, 1000 одновременных пользователей)
   prerequisites: |
-    Открыта главная страница сайта Gatling в браузере Google Chrome - 
+    Открыта главная страница сайта Gatling в браузере Google Chrome - https://cloud.gatling.io/
   test-data: |
     URL тестируемого сайта https://codebattle.hexlet.io/
   steps: 
-    - Открываем DevTools комбинацией клавиш Shift+Ctrl+I
-    - Выбираем вкладку "Security"
-    - В открывшемся окне "Security overview" проверяем, что сайт использует протокол HTTPS
-    - В открывшемся окне "Security overview" проверяем, что сертификат безопасности действующий
+    - Открываем инструмент для тестирования Gatling - https://cloud.gatling.io/ (можно войти с помощью аккаунта на Github)
+    - Выбираем вкладку "Simulations"
+    - Нажать  + Create a simulation
+    - В открывшемся окне выбрать Create a simulation withoiut coding
+    - Your web site URL - https://codebattle.hexlet.io/
+    - В установке Total test duration выбираем максимальные значения для всех позиций
+    - Задать любое название для симуляции Simulation name
+    - Выбрать Your team - Default team
+    - Нажать Save and launch
+    - Дождаться завершения теста ( 300 секунд )
   expected-result: |
-    В окне "Security overview" должны увидеть надписи  This page is secure (valid HTTPS) 
-    Сертификат подтвержден и действующий (Sertificate - valid and trusted)
+    В результатах теста должны отсутствовать ошибки
+    Количество запросов должно быть не менее 1000 
     
