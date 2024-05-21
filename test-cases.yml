@@ -570,7 +570,7 @@
     Открыт DevTools 
   test-data: |
     URL тестируемого сайта https://codebattle.hexlet.io/
-    Устройства для тестирования - iPhone SE, iPhone 14 Pro Max, Samsung Galaxy A51/71, iPad, Asus Zenbook Fold
+    Устройства для тестирования - iPhone SE, iPhone 14 Pro Max, Samsung Galaxy A51/71, Galaxy S8, Nokia Lumia 520
   steps:
     - Открыть Device Toolbar Ctrl+Shift+M
     - Выбрать одно из устройств для тестирования
