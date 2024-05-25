@@ -454,6 +454,57 @@
 
 #non-functional requirements
 - summary: |
+    Проверка работы сайта при высокой нагрузке
+  requirement: |
+    Сайт должен быть способен обрабатывать большое количество трафика (например, 1000 одновременных пользователей)
+  prerequisites: |
+    Открыта главная страница сайта Gatling в браузере Google Chrome - https://cloud.gatling.io/
+  test-data: |
+    URL тестируемого сайта https://codebattle.hexlet.io/
+  steps: 
+    - Открываем инструмент для тестирования Gatling - https://cloud.gatling.io/ (можно войти с помощью аккаунта на Github)
+    - Выбираем вкладку "Simulations"
+    - Нажать  + Create a simulation
+    - В открывшемся окне выбрать Create a simulation withoiut coding
+    - Your web site URL - https://codebattle.hexlet.io/
+    - В пункте 2 -Setup your injection profile выбираем Stress Test
+    - В установке Total test duration - 20 секунд
+    - В установке Total injected users - 100 пользователей (максимально возможное)
+    - Задать название для симуляции Simulation name - Stress Testing ( можно любое другое )
+    - Выбрать Your team - Default team
+    - Нажать Save and launch
+    - Дождаться завершения теста 
+  expected-result: |
+    В результатах теста должны отсутствовать ошибки Error ratio - 0%
+    Количество запросов = 100 
+    Успешный результат теста для сравнения отображен на скринтшоте StressTest
+
+- summary: |
+    Проверка работы сайта при стрессовой нагрузке
+  requirement: |
+    Сайт должен быть способен обрабатывать большое количество трафика 
+  prerequisites: |
+    Открыта главная страница сайта Gatling в браузере Google Chrome - https://cloud.gatling.io/
+  test-data: |
+    URL тестируемого сайта https://codebattle.hexlet.io/
+  steps: 
+    - Открываем инструмент для тестирования Gatling - https://cloud.gatling.io/ (можно войти с помощью аккаунта на Github)
+    - Выбираем вкладку "Simulations"
+    - Нажать  + Create a simulation
+    - В открывшемся окне выбрать Create a simulation withoiut coding
+    - Your web site URL - https://codebattle.hexlet.io/
+    - В пункте 2 -Setup your injection profile оставляем по умолчанию Capacity Test
+    - В установке Total test duration выбираем максимальные значения для всех позиций
+    - Задать любое название для симуляции Simulation name
+    - Выбрать Your team - Default team
+    - Нажать Save and launch
+    - Дождаться завершения теста ( 300 секунд )
+  expected-result: |
+    В результатах теста должны отсутствовать ошибки
+    Общее количество запросов должно быть более 1000
+    Успешный результат теста для сравнения отображенна скринтшоте GatlingTest
+    
+- summary: |
     Проверка успешной оптимизации загрузки с использованием кэширования
   requirement: |
     Сайт должен быть оптимизирован для скорости работы
@@ -601,30 +652,6 @@
     - Повторить эти же шаги для остальных устройств из списка - Устройства для тестирования  
   expected-result: |
     Сайт должен отображаться на каждом устройстве, при этом изображения, кнопки и текст не наезжают друг на друга
-
-- summary: |
-    Проверка работы сайта при высокой нагрузке
-  requirement: |
-    Сайт должен быть способен обрабатывать большое количество трафика (например, 1000 одновременных пользователей)
-  prerequisites: |
-    Открыта главная страница сайта Gatling в браузере Google Chrome - https://cloud.gatling.io/
-  test-data: |
-    URL тестируемого сайта https://codebattle.hexlet.io/
-  steps: 
-    - Открываем инструмент для тестирования Gatling - https://cloud.gatling.io/ (можно войти с помощью аккаунта на Github)
-    - Выбираем вкладку "Simulations"
-    - Нажать  + Create a simulation
-    - В открывшемся окне выбрать Create a simulation withoiut coding
-    - Your web site URL - https://codebattle.hexlet.io/
-    - В установке Total test duration выбираем максимальные значения для всех позиций
-    - Задать любое название для симуляции Simulation name
-    - Выбрать Your team - Default team
-    - Нажать Save and launch
-    - Дождаться завершения теста ( 300 секунд )
-  expected-result: |
-    В результатах теста должны отсутствовать ошибки
-    Общее количество запросов должно быть более 1000
-    Вывод теста отображен на скринтшоте GatlingTest
 
 #implicit requirments
 - summary: |
