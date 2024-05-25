@@ -94,6 +94,14 @@
 
 #non-functional requirements
 - summary: |
+    Проверка работы сайта при высокой нагрузке
+  status: pass
+  
+- summary: |
+    Проверка работы сайта при стрессовой нагрузке
+  status: pass
+
+- summary: |
     Проверка успешной оптимизации загрузки с использованием кэширования
   status: pass
 
