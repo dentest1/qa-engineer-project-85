@@ -505,31 +505,6 @@
     Успешный результат теста для сравнения отображенна скринтшоте GatlingTest
 
 - summary: |
-    Проверка работы сайта при высокой нагрузке с помощью JMeter
-  requirement: |
-    Сайт должен быть способен обрабатывать большое количество трафика (например, 1000 одновременных пользователей)
-  prerequisites: |
-   Запущена программа Apache JMeter
-  test-data: |
-    Имена серверов Codebattle:
-    Name Server: kirk.ns.cloudflare.com
-    Name Server: ulla.ns.cloudflare.com
-  steps: 
-    - Открываем инструмент для тестирования JMeter
-    - Нажать ПКМ на Test Plan -> Add -> Threads -> Thread Group
-    - Задать Numbers of Thread - 1000
-    - Задать Rump up period - 1 sec
-    - Задать Loop Count - 1
-    - Нажать ПКМ на Thread Group в левом меню -> Add -> Sampler -> HTTP request
-    - Задать имя сервера Server Name - kirk.ns.cloudflare.com
-    - Нажать ПКМ на Thread Group в левом меню -> Add -> Listener -> Summary Report
-    - Запустить тест, нажав кнопку Start ( зеленый треугольник в меню интсрументов вверху )
-    - Дождаться окончания теста
-    - Создать такой же тест для сервера ulla.ns.cloudflare.com
-  expected-result: |
-    В результатах теста должны отсутствовать ошибки Error - 0%
-    
-- summary: |
     Проверка успешной оптимизации загрузки с использованием кэширования
   requirement: |
     Сайт должен быть оптимизирован для скорости работы
