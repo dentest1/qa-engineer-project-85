@@ -532,10 +532,10 @@
     Сайт должен быть оптимизирован для скорости работы
   prerequisites: |
     Открыта главная страница сайта в браузере Google Chrome
+    Открыт DevTools комбинацией клавиш Shift+Ctrl+I
   test-data: |
     URL тестируемого сайта https://codebattle.hexlet.io/
   steps: |
-    - Открываем DevTools комбинацией клавиш Shift+Ctrl+I
     - Выбираем вкладку Network
     - Отключить настройку Disable Cache
     - Перезагрузить страницу
