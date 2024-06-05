@@ -1,5 +1,5 @@
 ---
-#functional requirements    
+#functional requirements  
 - summary: |
     Проверка успешной регистрации на сайте с помощью существующей электронной почты 
   requirement: |
