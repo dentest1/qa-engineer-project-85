@@ -535,8 +535,8 @@
     Открыт DevTools комбинацией клавиш Shift+Ctrl+I
   test-data: |
     URL тестируемого сайта https://codebattle.hexlet.io/
-  steps: |
-    - Выбираем вкладку Network
+  steps: 
+    - Открыть вкладку Network
     - Отключить настройку Disable Cache
     - Перезагрузить страницу
   expected-result: |
@@ -548,10 +548,10 @@
     Сайт должен загрузиться при низкой скорости без ошибок
   prerequisites: |
     Открыта главная страница сайта в браузере Google Chrome
+    Открыт DevTools комбинацией клавиш Shift+Ctrl+I
   test-data: |
     URL тестируемого сайта https://codebattle.hexlet.io/
   steps: 
-    - Открываем DevTools комбинацией клавиш Shift+Ctrl+I
     - Выбираем вкладку Network
     - В настройке No throttling выьрать Slow 3G
     - Перезагрузить страницу
@@ -566,10 +566,10 @@
   prerequisites: |
     Отключены антивирусные программы 
     Открыта главная страница сайта в браузере Google Chrome
+    Открыт DevTools комбинацией клавиш Shift+Ctrl+I
   test-data: |
     URL тестируемого сайта https://codebattle.hexlet.io/
   steps: 
-    - Открываем DevTools комбинацией клавиш Shift+Ctrl+I
     - Выбираем вкладку "Performance insights"
     - Нажать на кнопку "Measure page load"
     - В открывшемся графике найти значение LCP 
